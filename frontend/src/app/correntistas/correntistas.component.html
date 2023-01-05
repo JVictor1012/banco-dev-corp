@@ -1,0 +1,24 @@
+<div class="dashboard" *ngFor="let dado of dados">
+  <div class="info-item">
+    <label>Código:</label>
+    <span>{{dado.IdCorrentista}}</span>
+  </div>
+  <div class="info-item" >
+    <label>Nome:</label>
+    <span>{{dado.NomeCorrentista}}</span>
+  </div>
+  <div class="info-item">
+    <label>Email:</label>
+    <span>{{dado.EmailCorrentista}}</span>
+  </div>
+  <div class="info-item">
+    <label>Saldo:</label>
+    <span>{{dado.Saldo}}</span>
+  </div>
+  <div class="options">
+    <button>Saque</button>
+    <button>Depósito</button>
+    <button>Extrato</button>
+    <button>Pagamento</button>
+  </div>
+</div>

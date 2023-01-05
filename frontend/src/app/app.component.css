@@ -1,0 +1,23 @@
+.navbar {
+    background-color: #4caf50;
+    color: white;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  .footer {
+    background-color: lightgray;
+    color: black;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
