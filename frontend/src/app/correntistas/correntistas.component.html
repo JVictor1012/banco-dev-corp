@@ -15,10 +15,12 @@
     <label>Saldo:</label>
     <span>{{dado.Saldo}}</span>
   </div>
+</div>  
+  <h3 *ngFor="let dado of dados">Bem vindo {{dado.NomeCorrentista}}!</h3>
   <div class="options">
-    <button>Saque</button>
-    <button>Depósito</button>
-    <button>Extrato</button>
-    <button>Pagamento</button>
+    <button routerLink="/saque" >Saque</button>
+    <button routerLink="/transferencia" >Tranferêcia</button>
+    <button routerLink="/deposito" >Depósito</button>
+    <button routerLink="/extrato" >Extrato</button>
+    <button routerLink="/pagamento" >Pagamento</button>
   </div>
-</div>

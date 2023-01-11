@@ -1,0 +1,25 @@
+<br>
+<button routerLink="/correntistas" >Voltar</button>
+<div class="card" *ngFor="let dado of dados">
+    <h1 class="card-title" >SAQUE</h1>
+    <form class="form-container">
+    <div class="saldo">
+        <span>{{dado.Saldo}}</span>
+        <span>Saldo:</span>
+    </div>  
+      <div class="form-field">
+        <label>Quanto deseja sacar?:</label>
+        <input type="text" id="valor" name="valor" #valor>
+
+      </div>
+      <br>
+      
+        <button  type="submit" (click)="saque(valor.value)">Sacar</button>
+      
+      <br>
+
+
+    </form>
+</div>
+
+

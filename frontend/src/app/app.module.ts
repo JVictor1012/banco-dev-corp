@@ -10,15 +10,27 @@ import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 
 import { FormsModule } from '@angular/forms';
+import { SaqueComponent } from './saque/saque.component';
+import { TransferenciaComponent } from './transferencia/transferencia.component';
+import { PagamentoComponent } from './pagamento/pagamento.component';
+import { ExtratoComponent } from './extrato/extrato.component';
+import { DepositoComponent } from './deposito/deposito.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
     AppComponent,
     CorrentistasComponent,
     LoginComponent,
-    CadastroComponent
+    CadastroComponent,
+    SaqueComponent,
+    TransferenciaComponent,
+    PagamentoComponent,
+    ExtratoComponent,
+    DepositoComponent
   ],
   imports: [
+    CommonModule,
     FormsModule,
     BrowserModule,
     AppRoutingModule,

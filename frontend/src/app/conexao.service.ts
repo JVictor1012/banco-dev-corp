@@ -12,6 +12,7 @@ export class ConexaoService {
 
   constructor(private http: HttpClient) {
     this.api = "http://localhost:3000";
+    this.codigo = 0
    }
 
    getCodigo(){
@@ -31,6 +32,10 @@ export class ConexaoService {
     return this.http.get(`${this.api}/correntistas/${id}`)
   }
 
+  getExtrato(id: any){
+    return this.http.get(`${this.api}/extrato/${id}`)
+  }
+
   cadastrarCorrentista(nome: string, email: string, saldo: any): Observable<any>{
     return this.http.post(`${this.api}/correntistas`, {
       "NomeCorrentista": nome,
@@ -38,6 +43,44 @@ export class ConexaoService {
       "Saldo": saldo
     }
     );
+  }
+
+  sacar(id: any, valor: any): Observable<any>{
+    return this.http.post(`${this.api}/saque`, {
+      "IdCorrentistaOrigem": id,
+      "valor": valor,
+    }
+    )
+  }
+
+  tranferencia(origem: any, destino: any, valor: any): Observable<any>{
+    return this.http.post(`${this.api}/transferencia`, {
+      "IdCorrentistaOrigem": origem,
+      "IdCorrentistaDestino": destino,
+      "valor": valor,
+    }
+    )
+  }
+
+  pagamento(origem: any, valor: any): Observable<any>{
+    return this.http.post(`${this.api}/pagamento`, {
+      "IdCorrentistaOrigem": origem,
+      "valor": valor,
+    }
+    )
+  }
+
+  deposito(origem: any, destino: any, valor: any): Observable<any>{
+    return this.http.post(`${this.api}/deposito`, {
+      "IdCorrentistaOrigem": origem,
+      "IdCorrentistaDestino": destino,
+      "valor": valor,
+    }
+    )
+  }
+
+  sair(){
+    this.setCodigo(null)
   }
 
 }

@@ -17,11 +17,13 @@
         <input type="number" id="saldo" name="saldo" #saldo>
       </div>
       <div>
-        <button  type="submit" (click)="cadastrar(nome.value, email.value, saldo.value)">Cadastrar</button>
+        <button  type="submit" (click)="cadastrar(nome.value, email.value, saldo.value)" routerLink="/correntistas">Cadastrar</button>
       </div>
       <br>
-      <button type="button" (click)="proxima()" >Correntistas</button>
 
     </form>
+    <div class="register">
+      <p>Já possui conta? </p> <a id="link" routerLink="/login">Faça Login</a>
+      </div>
   </div>
 

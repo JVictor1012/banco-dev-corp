@@ -84,13 +84,13 @@ app.post('/saque', function (req, res) {
   })
 })
 
-app.post('/Pagamento', function (req, res) {
+app.post('/pagamento', function (req, res) {
   conn.connect().then((pool) => {
     const IdOrigem = req.body.IdCorrentistaOrigem
     const Valor = req.body.valor
     const queryStr = `EXEC spPagamento ${IdOrigem}, ${Valor}`
     pool.query(queryStr).then((rows) => {
-      res.status(201).send("Pagamento concluido!")
+      res.status(201).send()
     })
   })
 })
@@ -111,7 +111,7 @@ app.post('/correntistas', (req, res) => {
     const nome =  req.body.NomeCorrentista ;
     const email =  req.body.Email ;
     const saldo =  req.body.Saldo;
-    const queryStr = `insert into correntista (NomeCorrentista, EmailCorrentista, Data, Saldo) values('${nome}', '${email}', GETDATE(), '${saldo}')`
+    const queryStr = `insert into correntista (NomeCorrentista, EmailCorrentista, Data, Saldo) values('${nome}', '${email}', GETDATE(), ${saldo})`
     pool.query(queryStr).then((rows) => {
       res.status(201).send()
     })

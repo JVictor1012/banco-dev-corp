@@ -1,0 +1,18 @@
+<br>
+<button routerLink="/correntistas" >Voltar</button>
+<div *ngFor="let dado of dados">
+    <table>
+        <tr>
+          <th>Código</th>
+          <th>Tipo de transação</th>
+          <th>Valor</th>
+          <th>Data</th>
+        </tr>
+        <tr>
+          <td>{{dado.IdMovimentacao}}</td>
+          <td>{{dado.tipo}}</td>
+          <td>{{dado.valor}}</td>
+          <td>{{dado.dataOperacao}}</td>
+        </tr>
+      </table>
+</div>

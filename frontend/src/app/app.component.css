@@ -1,3 +1,5 @@
+
+
 .navbar {
     background-color: #4caf50;
     color: white;
@@ -6,11 +8,13 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
+    font-family: 'Open Sans', sans-serif; 
   }
   .navbar a {
     color: white;
     text-decoration: none;
     font-size: 16px;
+    margin: 150px;
   }
   .footer {
     background-color: lightgray;

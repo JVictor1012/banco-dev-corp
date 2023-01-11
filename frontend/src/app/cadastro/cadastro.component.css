@@ -59,3 +59,14 @@
   button:hover {
     background-color: #45a049;
   }
+
+  .register{
+    display: flex;
+    flex-direction: row;
+  }
+
+  #link{
+    margin-bottom: 16px;
+    margin-top: 16px;
+    color: #45a049;
+  }

@@ -1,0 +1,29 @@
+<br>
+<button routerLink="/correntistas" >Voltar</button>
+<div class="card" *ngFor="let dado of dados">
+    <h1 class="card-title" >Pagamentos</h1>
+    <form class="form-container">
+    <div class="saldo">
+        <span>{{dado.Saldo}}</span>
+        <span>Saldo:</span>
+    </div>  
+    <div class="form-field">
+        <label>Insira o código de barras:</label>
+        <input type="text" id="codigo" name="codigo" #codigo>
+
+      </div>
+      <div class="form-field">
+        <label>Valor do Pagamento:</label>
+        <input type="text" id="valor" name="valor" #valor>
+
+      </div>
+      <br>
+      
+        <button  type="submit" (click)="pagamento(valor.value)">Pagar</button>
+      
+      <br>
+
+
+    </form>
+</div>
+

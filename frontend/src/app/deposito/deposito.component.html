@@ -1,0 +1,33 @@
+<br>
+<button routerLink="/correntistas" >Voltar</button>
+<div class="card" *ngFor="let dado of dados">
+    <h1 class="card-title" >Depósito</h1>
+    <form class="form-container">
+
+    <div class="saldo">
+        <span>{{dado.Saldo}}</span>
+        <span>Saldo:</span>
+    </div> 
+
+      <div class="form-field">
+        <label>Quanto deseja Depositar?:</label>
+        <input type="text" id="valor" name="valor" #valor>
+      </div>
+
+      <br>
+
+      <div class="form-field">
+        <label>Para quem vai depositar?:</label>
+        <input type="text" id="destino" name="destino" #destino>
+      </div>
+      
+       <button  type="submit" (click)="deposito(destino.value, valor.value)">Tranferir</button>
+      
+      <br>
+
+
+    </form>
+</div>
+
+
+

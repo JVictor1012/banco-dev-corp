@@ -15,8 +15,8 @@ export class CorrentistasComponent implements OnInit {
  
   constructor(private service: ConexaoService, private route: Router) {
     this.dados = '';
-    //this.codigo = service.getCodigo();
-    this.codigo = 1
+    this.codigo = service.getCodigo();
+    //this.codigo = 1
  
    }
 
@@ -30,5 +30,7 @@ export class CorrentistasComponent implements OnInit {
     });
 
   }
+
+
 
 }

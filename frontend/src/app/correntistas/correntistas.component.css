@@ -1,21 +1,30 @@
+div{
+  font-family: 'Open Sans', sans-serif; 
+}
+
+h3{
+  margin: 35px;
+}
+
 .dashboard {
     display: flex;
-    flex-direction: row-reverse;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     align-items: center;
-  }
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
   .info-item {
     display: flex;
     align-items: center;
     margin: 20px;
     border: #4caf50;
     border-radius: 10px;
-  }
+}
   .info-item > label {
     width: 120px;
     font-weight: bold;
     margin-right: 10px;
-  }
+}
 
   button {
     background-color: #4caf50;
@@ -25,8 +34,12 @@
     padding: 7px;
     cursor: pointer;
     margin: 10px;
-  }
+}
   .options{
+    display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     padding: 15px;
-  }
+    align-items: center;
+
+}
