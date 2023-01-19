@@ -25,7 +25,7 @@ export class DepositoComponent implements OnInit {
   }
 
   deposito(destino: any, valor: any){
-    this.service.tranferencia(this.codigo, destino, valor).subscribe(res =>{
+    this.service.deposito(destino, valor).subscribe(res =>{
       console.log(res)
     })
       

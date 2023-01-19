@@ -70,9 +70,8 @@ export class ConexaoService {
     )
   }
 
-  deposito(origem: any, destino: any, valor: any): Observable<any>{
+  deposito( destino: any, valor: any): Observable<any>{
     return this.http.post(`${this.api}/deposito`, {
-      "IdCorrentistaOrigem": origem,
       "IdCorrentistaDestino": destino,
       "valor": valor,
     }
